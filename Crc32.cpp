@@ -78,6 +78,18 @@ const size_t MaxSlice = 1;
 extern const uint32_t Crc32Lookup[MaxSlice][256]; // extern is needed to keep compiler happy
 #endif
 
+#ifdef PORTANDROID
+void say_hello_world(){
+
+  printf("Hello World!");
+
+  //reserved for some other changes...
+
+
+
+}
+
+#endif
 
 /// compute CRC32 (bitwise algorithm)
 uint32_t crc32_bitwise(const void* data, size_t length, uint32_t previousCrc32)
